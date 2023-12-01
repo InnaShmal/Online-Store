@@ -1,0 +1,599 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-Bold.woff2') format('woff2'),
+        url('fonts/Oswald-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-Light.woff2') format('woff2'),
+        url('fonts/Oswald-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-ExtraLight.woff2') format('woff2'),
+        url('fonts/Oswald-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-Medium.woff2') format('woff2'),
+        url('fonts/Oswald-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-Regular.woff2') format('woff2'),
+        url('fonts/Oswald-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('fonts/Oswald-SemiBold.woff2') format('woff2'),
+        url('fonts/Oswald-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: Oswald;
+}
+
+h1, h2 {
+    font-size: 1em;
+    margin: 0;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    padding-left: 21px;
+    padding-bottom: 36px;
+    padding-right: 20px;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.headerCenter {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.headerCenter> * {
+    margin-right: 28px;
+}
+.headerCenter:last-child {
+    margin-right: 0;
+}
+
+.headerCart {
+    display: flex;
+    align-items: center;
+
+}
+
+.headerCartDetails {
+    margin-left: 11px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-family: Roboto Medium;
+    font-weight: 400;
+    letter-spacing: 0.12px;
+}
+
+.headerAccount {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: Oswald;
+    font-weight: 600;
+    word-wrap: break-word
+}
+
+.like {
+    width: 17px;
+    height: 15px;
+    margin-left: 31px;
+    margin-right: 20px;
+}
+
+.cart {
+    width: 18px;
+    height: 20px;
+}
+
+.signIn {
+    margin-right: 12px;
+}
+
+.logo {
+    width: 330px;
+}
+
+.search {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+}
+
+.mainBackground {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: right;
+    position: absolute;
+    z-index: -1;
+}
+
+.mainHeader {
+    font-size: 86px;
+    font-weight: 600;
+    line-height: 96px;
+    width: 520px;
+    
+}
+
+.mainTransparent {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
+}
+
+.mainSvg {
+    position: absolute;
+    right: -41px;
+    top: -21px;
+}
+
+.mainText {
+    position: relative;
+    width: 520px;
+    margin-left: 234px;
+}
+
+.main {
+    position: relative;
+    height: 800px;
+    display: flex;
+    margin: 21px;
+    align-items: center;
+}
+
+.btn {
+    width: 175px;
+    height: 56px;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.50px;
+    text-transform: uppercase;
+}
+
+.switch {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.mainSquares {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.chosenCheckBox input{
+    display: none;
+}
+
+.switchRight {
+    background-color: black;
+}
+
+.switchLeft {
+    background-color: black;
+    margin-right: 3px;
+}
+
+.brands {
+    display: grid;
+    margin-top: 30px;
+    margin-left: 21px;
+    margin-right: 21px;
+    margin-bottom: 30px;
+    border: #C4C4C4 solid ;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 35px;
+    padding: 28px;
+    position: relative;
+}
+
+.brandsText {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -23px;
+    font-size: 24px;
+    text-transform: uppercase;
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.brandLogo {
+    width: 100%;
+}
+
+.imgBrands {
+    width: 100%;
+}
+
+.slidesWithOffers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-left: 21px;
+    margin-right: 21px;
+}
+
+.offersBottom {
+    grid-column: 1;
+    grid-row: 2;
+    height: 434px;
+    background-color: #F3DCD2;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.upTo40 {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    height: 898px;
+    background-color: #E0DED3;
+    position: relative;
+    display: flex;
+    align-items: end;
+    
+}
+
+.offersTop {
+    height: 434px;
+    background-color: #F3F0EF;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.offersTopPic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    
+}
+
+.offersBottomPic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    
+}
+
+.upTo40Pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    
+}
+
+.slideWithDresses {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-bottom: 63px;
+    margin-left: 21px;
+}
+
+.dressesCheckBox {
+    display: flex;
+    flex-direction: column;
+    width: 415px;
+}
+
+.upTo40Text {
+    position: relative;
+    z-index: 1;
+    margin-left: 86px;
+    margin-bottom: 103px;
+    
+}
+
+.offersBottomText {
+    position: relative;
+    z-index: 1;
+    margin-left: 94px;
+}
+
+.offersTopText {
+    position: relative;
+    z-index: 1;
+    margin-right: 64px;
+}
+
+.upTo40Title {
+    font-size: 96px;
+    text-transform: uppercase;
+    line-height: 110px;
+}
+
+.description {
+    font-size: 25px;
+    font-family: Roboto Light;
+    margin-top: 7px;
+}
+
+.checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hiddenCheckBox {
+    position: absolute;
+    opacity: 0;
+}
+
+.customCheckMark {
+    display: none;
+}
+
+.customCheckBox {
+    border: 1px solid black ;
+    width: 10px;
+    height: 10px;
+    display: flex;
+
+}
+
+.hiddenCheckBox:checked + .customCheckBox .customCheckMark {
+    display: inline-block;
+}
+
+.offersText {
+    font-size: 48px;
+    text-transform: uppercase;
+    line-height: 62px;
+}
+
+.checkBoxText {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 9px;
+}
+
+.containerWithDress {
+    width: 344px;
+    height: 548px;
+    margin-bottom: 48px;
+}
+
+.dressOnMainSlide {
+    height: 450px;
+}
+
+.dressesMainSlide {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: space-between;
+    margin-bottom: 63px;
+
+}
+
+.showSomeWear {
+    margin-top: 48px;
+    font-size: 24px;
+    font-family: Oswald;
+    line-height: 68px;
+    font-weight: 400;
+    margin-right: 242px;
+}
+
+.categoryOfDress {
+    color: #BDBDBD;
+    font-size: 12px;
+    margin-top: 14px;
+    font-family: Oswald;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.descriptionOfSglDress {
+    font-size: 18px;
+    font-family: Oswald;
+    font-weight: 300;
+    margin-block-start: 0;
+}
+
+.price {
+    font-size: 22px;
+    font-family: Oswald;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 18px;
+}
+
+.discount {
+    width: 40px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+}
+
+.red {
+    color: #EB5757;
+}
+
+.crossedPrice {
+    color: #929292;
+    font-size: 17px;
+    text-decoration-line: line-through;
+    margin-left: 15px;
+}
+
+.create-line-left {
+    padding-left: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.btnShowMore {
+    width: 140px;
+    height: 50px;
+    text-transform: uppercase;
+    color: #828282;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.shopWithoutLimits {
+    position: relative;
+    display: flex;
+    margin: 21px;
+    align-items: center;
+    margin-top: 63px;
+    
+}
+
+.picWithoutLimits {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    margin-bottom: 77px;
+    margin-top: 62px;
+}
+
+.withoutLimitsDescription {
+    font-size: 25px;
+    font-family: Roboto Light;
+}
+
+.withoutLimitsHeader {
+    font-size: 56px;
+    font-family: Oswald;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.withoutLimitsText {
+    position: relative;
+    width: 639pxpx;
+    margin-left: 269px;
+}
+
+.withoutLimitsSvg {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+}
+
+.catalogByCategory {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 34px;
+    margin-right: 21px;
+}
+
+.nameOfCategory {
+    margin-bottom: 4px;
+    line-height: 68px;
+    font-size: 24px;
+}
+
+.dressByCategory {
+    display: flex;
+    flex-direction: column;
+    margin-top: 77px;
+    margin-left: 21px;
+}
+
+.category {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.blog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+}
+
+.promises {
+    display: flex;
+}
+
+.footer {
+    width: 100%;
+    height: 527px;
+    background-color: black;
+}
+
+.featuresMenu {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
