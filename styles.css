@@ -232,6 +232,11 @@ h1, h2 {
     margin-right: 3px;
 }
 
+.switchLeftOnCategory, .switchRightOnCategory {
+    background-color: transparent;
+    border: none;
+}
+
 .brands {
     display: grid;
     margin-top: 30px;
@@ -332,14 +337,16 @@ h1, h2 {
 .slideWithDresses {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    margin-bottom: 63px;
+    margin-bottom: 24px;
     margin-left: 21px;
+    margin-right: 21px;
 }
 
 .dressesCheckBox {
     display: flex;
     flex-direction: column;
-    width: 415px;
+    width: 100%;
+    position: relative;
 }
 
 .upTo40Text {
@@ -374,32 +381,39 @@ h1, h2 {
     margin-top: 7px;
 }
 
-.checkbox {
-    position: relative;
+.coverCheckBox {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
 }
 
 .hiddenCheckBox {
+    opacity: 0;
     position: absolute;
+}
+
+.hiddenCheckBox:checked + .coverCheckBox > .transparentSvg{
+    opacity: 1;
+} 
+
+.transparentSvg { 
     opacity: 0;
 }
 
-.customCheckMark {
-    display: none;
-}
-
-.customCheckBox {
-    border: 1px solid black ;
-    width: 10px;
-    height: 10px;
+.checkBox {
     display: flex;
-
+    align-items: center;
 }
 
-.hiddenCheckBox:checked + .customCheckBox .customCheckMark {
-    display: inline-block;
+.dressesCheckBox::after {
+    content: '';
+    width: 2px;
+    height: calc(100% - 54px);
+    background-color: #C4C4C4;
+    position: absolute;
+    right: 30px;
+    top: 30px;
 }
 
 .offersText {
@@ -415,22 +429,21 @@ h1, h2 {
 }
 
 .containerWithDress {
-    width: 344px;
-    height: 548px;
-    margin-bottom: 48px;
+    width: 100%;
+    margin-bottom: 79;
 }
 
 .dressOnMainSlide {
-    height: 450px;
+    width: 100%;
 }
 
 .dressesMainSlide {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
     margin-top: 30px;
-    justify-content: space-between;
     margin-bottom: 63px;
-
+    width: 100%;
 }
 
 .showSomeWear {
@@ -501,15 +514,18 @@ h1, h2 {
     color: #828282;
     font-size: 14px;
     background-color: transparent;
+    margin-top: 63px;
+    border:  2px #C4C4C4 solid;
 }
 
 .shopWithoutLimits {
     position: relative;
     display: flex;
-    margin: 21px;
+    padding: 63px 0 78px;
     align-items: center;
-    margin-top: 63px;
-    
+    overflow: hidden;
+    margin-left: 21px;
+    margin-right: 21px;
 }
 
 .picWithoutLimits {
@@ -539,45 +555,57 @@ h1, h2 {
 }
 
 .withoutLimitsSvg {
+    position: relative;
+    right: -1px;
+    top: -1px;
+}
+
+.withoutLimitsSvgRight{
     position: absolute;
     right: -1px;
     top: -1px;
 }
 
 .catalogByCategory {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 34px;
-    margin-right: 21px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 31px;
 }
 
 .nameOfCategory {
-    margin-bottom: 4px;
-    line-height: 68px;
     font-size: 24px;
+}
+
+.mostPopular {
+    margin-top: 79px;
 }
 
 .dressByCategory {
     display: flex;
     flex-direction: column;
-    margin-top: 77px;
     margin-left: 21px;
+    margin-right: 21px;
+    margin-bottom: 118px;
 }
 
 .category {
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
 }
 
 .blog {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
+    margin-left: 21px;
+    margin-right: 21px;
 }
 
 .promises {
     display: flex;
+    background-color: #E6F1FA;
+    justify-content: space-around;
 }
 
 .footer {
@@ -589,11 +617,143 @@ h1, h2 {
 .featuresMenu {
     display: flex;
     color: white;
-    justify-content: space-around;
+    font-size: 18px;
+    justify-content: space-between;
+    margin-left: 21px;
+    margin-right: 21px;
 }
 
-.features {
+.oneOfFeatures {
     display: flex;
     flex-direction: column;
     color: white;
+    margin-top: 65px;
+}
+
+.onlyDressesMainSlide {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 26px;
+    row-gap: 48px;
+    width: 100%;
+}
+
+.bestOfYou {
+    display: flex;
+    margin-left: 21px;
+    margin-bottom: 82px;
+}
+
+.bestOfYouHeader{
+    font-size: 56px;
+    line-height: 72px;
+    margin-top: -100px;
+    margin-bottom: 34px;
+}
+
+.bestOfYouText {
+    margin-left: 96px;
+    position: relative;
+}
+
+.svgBestOfYou {
+    margin-left: 49px;
+}
+
+.descriptionBestOfYou {
+    font-size: 25px;
+    line-height: 37px;
+}
+
+.blogContainer {
+    background-color: #F8F9FB;
+    padding-bottom: 46px;
+}
+
+.eachArticle {
+    background-color: white;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tipsAndArticles {
+    color: #BDBDBD;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: Oswald;
+    font-weight: 600;
+    margin-bottom: 21px;
+}
+
+.headerOfArticle {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+.textArticle {
+    font-size: 16px;
+    font-family: Roboto Light;
+    font-weight: 400;
+    line-height: 24px;
+    flex-grow: 1;
+    margin-bottom: 99px;
+}
+
+.dateOfArticle {
+    border-top: 3px solid black;    
+}
+
+.nameOfBlog {
+    margin-left: 21px;
+    font-size: 24px;
+    line-height: 68px;
+}
+
+.blogHeader {
+    display: flex;
+    align-items: center;
+}
+
+.oneOfPromises {
+    display: flex;
+    align-items: center;
+    padding: 35px;
+}
+
+.featuresMenu>.logo {
+    width: auto;
+}
+
+.oneOfFeatures a {
+    color: #828282;
+    font-size: 13px;
+    line-height: 27px;
+}
+
+.contacts {
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 45px;
+    font-family: Oswald;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.oneOfFeatures {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.bottomText {
+    margin-left: 21px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 27px;
 }
